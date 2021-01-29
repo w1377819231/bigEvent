@@ -3,7 +3,14 @@ axios.defaults.baseURL = 'http://api-breakingnews-web.itheima.net'
 // 添加请求拦截器
 axios.interceptors.request.use(function(config) {
     // 在发送请求之前做些什么
-    console.log('发送请求前');
+    console.log('发送请求前', config);
+    console.log(config.url);
+    var token = localStorage.getItem('token') || ''
+
+    if (config.url.startsWith('/my')) {
+        config.headers.Authorization = token
+    }
+
     return config;
 }, function(error) {
     // 对请求错误做些什么
