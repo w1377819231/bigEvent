@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的项目</title>
+  <!-- 引入 layui 插件的 css 文件 -->
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+  <!-- 引入自己的css文件 -->
+  <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+  <div class="layui-card">
+    <div class="layui-card-header">写文章</div>
+    <div class="layui-card-body">
+      <!-- 发布表单 -->
+      <form class="layui-form" action="">
+        <!-- 文章标题 -->
+        <div class="layui-form-item">
+          <label class="layui-form-label">输入框</label>
+          <div class="layui-input-block">
+            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <!-- 文章类别 -->
+        <div class="layui-form-item">
+          <label class="layui-form-label">选择框</label>
+          <div class="layui-input-block">
+            <select name="city" lay-verify="required">
+              <option value=""></option>
+              <option value="0">北京</option>
+              <option value="1">上海</option>
+              <option value="2">广州</option>
+              <option value="3">深圳</option>
+              <option value="4">杭州</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 引入 jquery 文件 -->
+  <script src="../assets/lib/jquery.js"></script>
+  <!-- 引入 layui 的 js 文件 -->
+  <script src="../assets/lib/layui/layui.all.js"></script>
+  <!-- 引入请求库 axios 的 js 文件 -->
+  <script src="../assets/lib/axios.js"></script>
+  <!-- 引入公共的请求设置文件 -->
+  <script src="../assets/js/commonAPI.js"></script>
+  <!-- 引入自己的文件 -->
+  <script src="../assets/js/article/publish.js"></script>
+</body>
+</html>
